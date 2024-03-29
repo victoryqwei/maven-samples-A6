@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  tools {
+    maven 'maven'
+    jdk 'default'
+  }
   stages {
     stage('check out') {
       steps {
@@ -19,9 +23,5 @@ pipeline {
       }
     }
 
-  }
-  tools {
-    maven 'maven'
-    jdk 'default'
   }
 }
